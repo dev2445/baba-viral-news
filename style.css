@@ -223,7 +223,7 @@ padding:18px 40px;
     font-size: 30px;
     color: #fff;
 
-    background: rgba(0,136,204,0.25);
+    background: linear-gradient(135deg, #00c6ff, #0088cc);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
 
@@ -231,9 +231,10 @@ padding:18px 40px;
     border-radius: 50%;
 
     box-shadow:
-        0 0 15px rgba(0,136,204,0.6),
-        0 0 30px rgba(0,136,204,0.4),
-        inset 0 0 10px rgba(255,255,255,0.2);
+    0 0 20px #00d4ff,
+    0 0 40px rgba(0,212,255,0.8),
+    0 0 60px rgba(0,212,255,0.6),
+    inset 0 0 12px rgba(255,255,255,0.35);
 
     z-index: 9999;
     transition: all 0.3s ease;
