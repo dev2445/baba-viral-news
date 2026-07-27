@@ -233,23 +233,6 @@ padding:18px 40px;
     transform: scale(1.1);
 }
 
-.floating-telegram {
-    
-}
 
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(0, 136, 204, 0.7);
-    }
 
-    70% {
-        transform: scale(1.1);
-        box-shadow: 0 0 0 18px rgba(0, 136, 204, 0);
-    }
 
-    100% {
-        transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(0, 136, 204, 0);
-    }
-}
