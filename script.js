@@ -1,15 +1,15 @@
 // =========================
-// VIRAL VIDEOS V2.0
+// BABA VIRAL NEWS V2.0
 // Ultra Premium Script
 // =========================
 
 // Smooth Scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+    anchor.addEventListener("click", function(e) {
         e.preventDefault();
 
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth"
         });
     });
 });
@@ -17,47 +17,31 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Reveal Animation
 const reveals = document.querySelectorAll(".reveal");
 
-window.addEventListener("scroll", () => {
-    reveals.forEach((element) => {
+function revealOnScroll() {
+    reveals.forEach((item) => {
         const windowHeight = window.innerHeight;
-        const revealTop = element.getBoundingClientRect().top;
+        const revealTop = item.getBoundingClientRect().top;
         const revealPoint = 120;
 
         if (revealTop < windowHeight - revealPoint) {
-            element.classList.add("active");
+            item.classList.add("active");
         }
     });
-});
+}
 
-// Button Click Animation
-const buttons = document.querySelectorAll(".btn");
+window.addEventListener("scroll", revealOnScroll);
 
-buttons.forEach(btn => {
+// Button Animation
+document.querySelectorAll(".btn").forEach(btn => {
     btn.addEventListener("click", () => {
-        btn.classList.add("clicked");
-
+        btn.style.transform = "scale(0.96)";
         setTimeout(() => {
-            btn.classList.remove("clicked");
-        }, 300);
+            btn.style.transform = "scale(1)";
+        }, 150);
     });
 });
 
-// Header Shadow
-window.addEventListener("scroll", () => {
-
-    const header = document.querySelector("header");
-
-    if (window.scrollY > 20) {
-        header.classList.add("sticky");
-    } else {
-        header.classList.remove("sticky");
-    }
-
-});
-
-// Loading Animation
+// Page Loaded
 window.addEventListener("load", () => {
-
     document.body.classList.add("loaded");
-
 });
