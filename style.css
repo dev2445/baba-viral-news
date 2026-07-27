@@ -214,19 +214,29 @@ padding:18px 40px;
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 60px;
-    height: 60px;
-    background: #0088cc;
-    color: white;
-    border-radius: 50%;
+    width: 65px;
+    height: 65px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    font-size: 30px;
+    align-items: center;
     text-decoration: none;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    font-size: 30px;
+    color: #fff;
+
+    background: rgba(0,136,204,0.25);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 15px rgba(0,136,204,0.6),
+        0 0 30px rgba(0,136,204,0.4),
+        inset 0 0 10px rgba(255,255,255,0.2);
+
     z-index: 9999;
-    transition: transform 0.3s;
+    transition: all 0.3s ease;
 }
 
 .floating-telegram:hover {
